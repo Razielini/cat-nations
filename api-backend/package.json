@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/boom": "^9.1.0",
+    "axios": "^0.20.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -24,8 +25,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
-    "request": "^2.88.2",
     "supertest": "^4.0.2",
-    "jest": "^26.4.0"
+    "jest": "^26.4.0",
+    "request": "^2.88.2"
   }
 }
