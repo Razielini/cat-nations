@@ -1,3 +1,4 @@
+/* eslint-disable */
 const testServer = require('../../utils/testServer');
 
 const baseRoute = '/cats-breed';
@@ -9,7 +10,7 @@ describe(`[${baseMock}] ENDPOINTS`, function () {
   const route = require('../../api/cats/routes');
   const request = testServer(route);
 
-  it(`[GET] Should return a collection of ${baseMock}`, function(done) {
+  it(`[GET] Should return a collection of ${baseMock}`, function (done) {
     request.get(`${baseRoute}/all/`).end((err, res) => {
       expect(res.body).toMatchObject({
         error: expect.any(Boolean),
