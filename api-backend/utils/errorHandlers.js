@@ -6,7 +6,8 @@ function wrapErrors(err, req, res, next) {
   next(err);
 }
 
-function errorHandler(err, req, res, next) { // eslint-disable-line
+function errorHandler(err, req, res) {
+  // eslint-disable-line
   const {
     output: { statusCode, payload }
   } = boom.internal();

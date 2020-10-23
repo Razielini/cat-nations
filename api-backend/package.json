@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "format": "prettier --write **/*.js",
+    "lint": "eslint ./ --fix"
   },
   "author": "Raziel Carvajal <razielco@gmail.com>",
   "license": "MIT",
@@ -34,7 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-push": "npm run lint && npm run format && npm run test"
     }
   }
 }

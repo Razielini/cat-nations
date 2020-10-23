@@ -1,3 +1,4 @@
+/* eslint-disable */
 const controller = require('../../api/cats/controller');
 const Controller = controller();
 
@@ -23,7 +24,7 @@ const LIST_OF_MOCK_CATS = [
   {
     name: 'American Shorthair',
     id: 'asho'
-  },
+  }
 ];
 
 const CAT_INFO = {
@@ -37,12 +38,14 @@ const CAT_INFO = {
       name: 'Abyssinian',
       cfa_url: 'http://cfa.org/Breeds/BreedsAB/Abyssinian.aspx',
       vetstreet_url: 'http://www.vetstreet.com/cats/abyssinian',
-      vcahospitals_url: 'https://vcahospitals.com/know-your-pet/cat-breeds/abyssinian',
+      vcahospitals_url:
+        'https://vcahospitals.com/know-your-pet/cat-breeds/abyssinian',
       temperament: 'Active, Energetic, Independent, Intelligent, Gentle',
       origin: 'Egypt',
       country_codes: 'EG',
       country_code: 'EG',
-      description: 'The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.',
+      description:
+        'The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.',
       life_span: '14 - 15',
       indoor: 0,
       lap: 1,
