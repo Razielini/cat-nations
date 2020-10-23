@@ -13,13 +13,16 @@ class Cats {
           'x-api-key': API_KEY
         }
       })
-      .then(async function (response) {
-        const data = await response.data.map(({ name, id }) => ({name, id }))
-        resolve(data);
-      })
-      .catch(function (error) {
+        .then(async function (response) {
+          const data = await response.data.map(({ name, id }) => ({
+            name,
+            id
+          }));
+          resolve(data);
+        })
+        .catch(function (error) {
           reject(error);
-      });
+        });
     });
   }
 
@@ -32,16 +35,16 @@ class Cats {
           'x-api-key': API_KEY
         }
       })
-      .then(async function (response) {
-        if(JSON.stringify(response.data.length) > 0) {
-          resolve(response.data[0].breeds[0]);
-        } else {
-          resolve(response.data);
-        }
-      })
-      .catch(function (error) {
+        .then(async function (response) {
+          if (JSON.stringify(response.data.length) > 0) {
+            resolve(response.data[0].breeds[0]);
+          } else {
+            resolve(response.data);
+          }
+        })
+        .catch(function (error) {
           reject(error);
-      });
+        });
     });
   }
 }

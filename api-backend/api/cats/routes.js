@@ -9,7 +9,6 @@ function catRoutes(app, store) {
 
   router.get('/all', CatsService.getAll);
   router.get('/search/:catName?', CatsService.searchCat);
-
 }
 
 module.exports = catRoutes;

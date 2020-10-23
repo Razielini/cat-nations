@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const slash = require('express-slash');
-const cors = require('cors')
+const cors = require('cors');
 const helmet = require('helmet');
 
 //Routes Call
