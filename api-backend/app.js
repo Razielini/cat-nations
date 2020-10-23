@@ -4,6 +4,12 @@ const slash = require('express-slash');
 const cors = require('cors');
 const helmet = require('helmet');
 
+const {
+  notFoundHandler,
+  wrapErrors,
+  errorHandler
+} = require('./utils/errorHandlers');
+
 //Routes Call
 const catRoutes = require('./api/cats/routes');
 
@@ -22,5 +28,9 @@ app.use(helmet());
 catRoutes(app, Cats);
 
 app.use(slash());
+
+app.use(notFoundHandler);
+app.use(wrapErrors);
+app.use(errorHandler);
 
 module.exports = app;
