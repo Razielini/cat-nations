@@ -37,7 +37,7 @@ class Cats {
       })
         .then(async function (response) {
           if (JSON.stringify(response.data.length) > 0) {
-            resolve(response.data[0].breeds[0]);
+            resolve(response.data[0]);
           } else {
             resolve(response.data);
           }

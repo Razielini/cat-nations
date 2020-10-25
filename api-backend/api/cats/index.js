@@ -1,1 +1,4 @@
-console.log('api cats index');
+const store = require('../../models/Cats');
+const controller = require('./controller');
+
+module.exports = controller(store);
