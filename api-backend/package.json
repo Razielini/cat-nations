@@ -1,0 +1,43 @@
+{
+  "name": "cats-nations",
+  "version": "1.0.0",
+  "description": "A exercie to know the nations of diferent cats breed.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --coverage",
+    "format": "prettier --write **/*.js",
+    "lint": "eslint ./ --fix"
+  },
+  "author": "Raziel Carvajal <razielco@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@sentry/node": "^5.27.1",
+    "axios": "^0.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-slash": "^2.0.1",
+    "helmet": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "supertest": "^4.0.2",
+    "jest": "^26.4.0",
+    "request": "^2.88.2",
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm run format && npm run test"
+    }
+  }
+}
