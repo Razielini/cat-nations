@@ -6,6 +6,7 @@ const helmet = require('helmet');
 
 const {
   notFoundHandler,
+  logErrors,
   wrapErrors,
   errorHandler
 } = require('./utils/errorHandlers');
@@ -30,6 +31,7 @@ catRoutes(app, Cats);
 app.use(slash());
 
 app.use(notFoundHandler);
+app.use(logErrors);
 app.use(wrapErrors);
 app.use(errorHandler);
 
