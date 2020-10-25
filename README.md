@@ -44,6 +44,7 @@ GET `/cats-breed/search/:catdId`
 - Dotenv
 - Express-slash
 - Helmet
+- Sentry
 - Jest
 - Supertest
 - Nodemon
