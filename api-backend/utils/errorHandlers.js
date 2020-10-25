@@ -1,5 +1,17 @@
 const boom = require('@hapi/boom');
 const response = require('./responses');
+const Sentry = require('@sentry/node');
+const { SENTRY_DNS, SENTRY_ID } = require('../config/index');
+
+if (SENTRY_DNS && SENTRY_ID)
+  Sentry.init({
+    dsn: `https://${SENTRY_DNS}@o410557.ingest.sentry.io/${SENTRY_ID}`
+  });
+
+function logErrors(err, req, res, next) {
+  if (SENTRY_DNS && SENTRY_ID) Sentry.captureException(err);
+  next(err);
+}
 
 function wrapErrors(err, req, res, next) {
   if (!err.isBoom) next(boom.badImplementation(err));
@@ -23,6 +35,7 @@ function notFoundHandler(req, res) {
 
 module.exports = {
   notFoundHandler,
+  logErrors,
   wrapErrors,
   errorHandler
 };
